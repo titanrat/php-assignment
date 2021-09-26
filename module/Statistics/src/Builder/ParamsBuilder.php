@@ -26,6 +26,10 @@ class ParamsBuilder
 
         return [
             (new ParamsTo())
+                ->setStatName(StatsEnum::AVERAGE_POST_NUMBER_PER_USER)
+                ->setStartDate($startDate)
+                ->setEndDate($endDate),
+            (new ParamsTo())
                 ->setStatName(StatsEnum::AVERAGE_POST_LENGTH)
                 ->setStartDate($startDate)
                 ->setEndDate($endDate),
@@ -35,10 +39,6 @@ class ParamsBuilder
                 ->setEndDate($endDate),
             (new ParamsTo())
                 ->setStatName(StatsEnum::TOTAL_POSTS_PER_WEEK),
-            (new ParamsTo())
-                ->setStatName(StatsEnum::AVERAGE_POST_NUMBER_PER_USER)
-                ->setStartDate($startDate)
-                ->setEndDate($endDate),
         ];
     }
 }
